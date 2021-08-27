@@ -62,6 +62,9 @@ bool Compare(const RouteModel::Node *a, RouteModel::Node *b)
     float f1 = a->g_value + a->h_value;
     float f2 = b->g_value + b->h_value;
     return f1 > f2;
+	// It's possible an improwement like this
+	// return (a->g_value + a->h_value) > (b->g_value + b->h_value);
+	// But I sacrifice readbility of the code.
 }
 
 // TODO 5: Complete the NextNode method to sort the open list and return the next node.
